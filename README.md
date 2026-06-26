@@ -12,8 +12,9 @@ Manufacturer -> Model -> Generation -> Trim + Specs, Other Ownership Variables
 ### Manufacturer Chassis Code Lookup
 
 As of right now:
-
-Manufacturer_Table = { 'Model Name': [{'generation': str, 'start_year': int, 'end_year': int}], }
+```python
+Manufacturer_Table = { 'Model Name': [{'generation': str, 'start_year': int, 'end_year': int}],... }
+```
 ***exception to inf value used to denote the generation has not yet finished production
 
 ### Manufacturer Trim Lookup
