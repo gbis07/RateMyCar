@@ -23,11 +23,11 @@ As of right now:
 Trim_table = {'Model Name': 'generation': {'generation identifier' : {
         "trim" : {
             "cylinders": int,
-            "displacement": Liters(float),
-            "horsepower": Mechanical Horespower(int),       # 1*
+            "displacement": float,                          # Liters
+            "horsepower": int,                              # Mechanical Horespower | 1*
             "aspiration": "NA" | "T" | "TT" | "H",          # 2*  
-            "torque": ft-lbs(int),                          # 3*
-            "drivetrain": "RWD" | "AWD",                    # 4*
+            "torque": int,                                  # ft-lbs | 3*
+            "drivetrain": "RWD" | "AWD" | "FWD",            # 4*
             "transmission": ("Manual", "Automatic"),        # 5*
             "body_styles": ("Coupe", ...) },                # 5*
         }
@@ -35,12 +35,12 @@ Trim_table = {'Model Name': 'generation': {'generation identifier' : {
 }
 ```
 
-1* -> PS(Metric HP) : PS / 1.014 = HP
-2* -> NA = Naturally Aspirated, T = Turbocharged(singular), TT = Twin Turbo, H = Hybrid
-***Unsure wether to combine H into monicer, i.e. new 911 GTS is a hybrid single turbo 3.6L
-3* -> NM * 0.738 = ft-lbs
-4* -> RWD = Rear-wheel Drive, AWD = All-wheel Drive
-5* Tuple can exclude values
+- 1* -> PS(Metric HP) : PS / 1.014 = HP
+- 2* -> NA = Naturally Aspirated, T = Turbocharged(singular), TT = Twin Turbo, H = Hybrid
+    - ***Unsure wether to combine H into monicer, i.e. new 911 GTS is a hybrid single turbo 3.6L -> HT
+- 3* -> NM * 0.738 = ft-lbs
+- 4* -> RWD = Rear-wheel Drive, AWD = All-wheel Drive
+- 5* Tuple can exclude values
 
 ## Methodology
 
