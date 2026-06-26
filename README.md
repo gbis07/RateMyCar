@@ -19,20 +19,21 @@ Manufacturer_Table = { 'Model Name': [{'generation': str, 'start_year': int, 'en
 ### Manufacturer Trim Lookup
 
 As of right now:
-
+```python
 Trim_table = {'Model Name': 'generation': {'generation identifier' : {
         "trim" : {
             "cylinders": int,
             "displacement": Liters(float),
-            "horsepower": Mechanical Horespower(int), 1*
-            "aspiration": "NA" | "T" | "TT" | "H", 2*  
-            "torque": ft-lbs(int), 3*
-            "drivetrain": "RWD" | "AWD", 4*
-            "transmission": ("Manual", "Automatic"), 5*
-            "body_styles": ("Coupe", ...) }, 5*
+            "horsepower": Mechanical Horespower(int),       # 1*
+            "aspiration": "NA" | "T" | "TT" | "H",          # 2*  
+            "torque": ft-lbs(int),                          # 3*
+            "drivetrain": "RWD" | "AWD",                    # 4*
+            "transmission": ("Manual", "Automatic"),        # 5*
+            "body_styles": ("Coupe", ...) },                # 5*
         }
     },
 }
+```
 
 1* -> PS(Metric HP) : PS / 1.014 = HP
 2* -> NA = Naturally Aspirated, T = Turbocharged(singular), TT = Twin Turbo, H = Hybrid
